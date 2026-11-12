@@ -1,5 +1,9 @@
 Well Hello there !!
 
+<p align="center">
+  <img src="koi/koi.gif" width="280" alt="My GitHub contribution koi">
+</p>
+
 
 ## 🌐 Socials:
  [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/daksh-yadav-b4b506293)
