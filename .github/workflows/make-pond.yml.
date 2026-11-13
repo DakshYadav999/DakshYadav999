@@ -1,0 +1,32 @@
+name: Make koi pond
+
+on:
+  workflow_dispatch:          # lets you run it manually
+  push:
+    paths:
+      - "assets/pond.png"
+      - "scripts/make_pond.py"
+      - "koi/koi.gif"
+  schedule:
+    - cron: "30 1 * * *"      # also runs daily
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - run: python scripts/make_pond.py
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add koi/koi_pond.gif
+          git diff --cached --quiet || git commit -m "Update koi pond"
+          git push
