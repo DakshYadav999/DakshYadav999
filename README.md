@@ -1,7 +1,7 @@
 Well Hello there !!
 
 <p align="center">
-  <img src="koi/koi_pond.gif" width="480" alt="Koi pond" />
+  <img src="koi/koi_pond.gif" width="480" alt="My koi pond" />
 </p>
 
 
