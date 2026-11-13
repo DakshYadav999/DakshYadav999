@@ -1,6 +1,6 @@
 from PIL import Image, ImageSequence
 
-BG_PATH, KOI_PATH, OUT_PATH = "assets/pond.png", "koi/koi.gif", "koi/koi_pond.gif"
+BG_PATH, KOI_PATH, OUT_PATH = "assets/pond_square.png", "koi/koi.gif", "koi/koi_pond.gif"
 
 koi = Image.open(KOI_PATH)
 size = koi.size
