@@ -23,7 +23,20 @@ jobs:
         with:
           body: white
           output-dir: koi
+      - uses: yalongwastaken/git-koi@v1
+        with:
+          body: white
+          output-dir: koi
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow && python scripts/make_pond.py
+
+      - name: Commit the koi if it changed
+        shell: bash
+        run: |
+          git add koi/koi.gif koi/koi_pond.gif
       - name: Commit the koi if it changed
         shell: bash
         run: |
