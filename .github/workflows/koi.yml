@@ -1,4 +1,3 @@
-
 name: Koi
 
 on:
@@ -23,10 +22,6 @@ jobs:
         with:
           body: white
           output-dir: koi
-      - uses: yalongwastaken/git-koi@v1
-        with:
-          body: white
-          output-dir: koi
 
       - uses: actions/setup-python@v5
         with:
@@ -37,10 +32,6 @@ jobs:
         shell: bash
         run: |
           git add koi/koi.gif koi/koi_pond.gif
-      - name: Commit the koi if it changed
-        shell: bash
-        run: |
-          git add koi/koi.gif
           if git diff --cached --quiet; then
             echo "The koi is unchanged."
             exit 0
